@@ -25,13 +25,13 @@ def test_stuff():
             if "off" in device.supported_fx:
                 led.off()
             if "static" in device.supported_fx:
-                led.static(0x00, 0xFF, 0x00)
+                led.static((0x00, 0xFF, 0x00))
             if "blinking" in device.supported_fx:
-                led.blinking(0xFF, 0x00, 0x00)
+                led.blinking((0xFF, 0x00, 0x00))
             if "breathing" in device.supported_fx:
-                led.breathing(0xFF, 0x00, 0x00)
+                led.breathing((0xFF, 0x00, 0x00))
             if "breathing_dual" in device.supported_fx:
-                led.breathing_dual(0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF)
+                led.breathing_dual((0xFF, 0x00, 0x00), (0x00, 0x00, 0xFF))
             if "breathing_random" in device.supported_fx:
                 led.breathing_random()
             if "spectrum" in device.supported_fx:
@@ -39,7 +39,7 @@ def test_stuff():
             if "wave" in device.supported_fx:
                 led.wave(0x01)
             if "reactive" in device.supported_fx:
-                led.reactive(0x01, 0x00, 0xFF, 0x00)
+                led.reactive(0x01, (0x00, 0xFF, 0x00))
 
 
 if __name__ == '__main__':
